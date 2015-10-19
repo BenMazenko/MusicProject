@@ -26,6 +26,7 @@ import javafx.scene.control.ListView;
 public class Controller 
 {
 	//testing to see if this shows up
+	// For the Third  update
 	public JFileChooser selectFileLocation;
 	File dir;
 	ArrayList<ArrayList<Song>> artistsLists;
