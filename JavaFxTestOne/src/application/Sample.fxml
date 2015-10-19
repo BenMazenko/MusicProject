@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox>
+         <children>
+            <ButtonBar>
+              <buttons>
+                  <Button layoutX="155.0" layoutY="18.0" mnemonicParsing="false" onMouseClicked="#artistBtn" text="Artist" />
+                  <Button layoutX="155.0" layoutY="18.0" mnemonicParsing="false" text="Album" />
+                <Button mnemonicParsing="false" text="Song" />
+              </buttons>
+            </ButtonBar>
+            <ListView fx:id="list" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </left>
+   <bottom>
+      <HBox prefHeight="56.0" prefWidth="640.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="65.0" prefWidth="102.0" text="Search" />
+            <Region prefHeight="56.0" prefWidth="238.0" HBox.hgrow="ALWAYS" />
+            <ButtonBar prefHeight="96.0" prefWidth="265.0">
+              <buttons>
+                <Button minWidth="43.0" mnemonicParsing="false" prefHeight="22.0" text="Prev" />
+                  <Button layoutX="135.0" layoutY="48.0" minWidth="29.0" mnemonicParsing="false" onMouseClicked="#selectFile" prefHeight="22.0" text="Select" />
+                  <Button layoutX="135.0" layoutY="48.0" mnemonicParsing="false" text="Next" />
+              </buttons>
+            </ButtonBar>
+            <Region />
+            <Region layoutX="112.0" layoutY="10.0" prefHeight="100.0" prefWidth="96.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Region HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" onDragOver="#playBtnClicked" prefHeight="150.0" prefWidth="150.0" text="Prev Thing" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="400.0" prefWidth="400.0" text="Current Selection" HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="150.0" prefWidth="150.0" text="Next Thing" HBox.hgrow="ALWAYS" />
+            <Region HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
