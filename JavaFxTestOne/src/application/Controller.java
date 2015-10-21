@@ -13,7 +13,9 @@ import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.UnsupportedTagException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
+import javafx.util.Callback;
 /**
  * Music Manager 
  * Controller.java
@@ -99,6 +101,19 @@ public class Controller
 				}
 			}
 		}
+		ObservableList<Artist> items =FXCollections.observableArrayList (artists);
+		list.setItems(items);
+		
+		list.setCellFactory( new Callback<ListView<Artist>, ListCell<Artist>>()
+				{
+					@Override
+					public ListCell<Artist> call(ListView<Artist> list )
+					{
+						return new ArtistListName();
+					}
+				});
+		
+		
 		
 	}
 	
@@ -249,5 +264,19 @@ public class Controller
 	
 	
 	//another random comment
-	
+	static class ArtistListName extends ListCell<Artist>
+	{
+		@Override
+		public void updateItem(Artist item, boolean empty)
+		{
+			super.updateItem(item, empty);
+			if (item != null )
+			{
+				setText(item.getArtistName());
+			}
+		}
+	}
 }
+
+		  
+

@@ -44,7 +44,7 @@
                 <Button mnemonicParsing="false" text="Song" />
               </buttons>
             </ButtonBar>
-            <ListView fx:id="list" VBox.vgrow="ALWAYS" />
+            <ListView fx:id="list" onMouseClicked="#artistBtn" VBox.vgrow="ALWAYS" />
          </children>
       </VBox>
    </left>
@@ -55,7 +55,7 @@
             <Region prefHeight="56.0" prefWidth="238.0" HBox.hgrow="ALWAYS" />
             <ButtonBar prefHeight="96.0" prefWidth="265.0">
               <buttons>
-                <Button minWidth="43.0" mnemonicParsing="false" prefHeight="22.0" text="Prev" />
+                <Button minWidth="43.0" mnemonicParsing="false" onMouseClicked="#artistBtn" prefHeight="22.0" text="Prev" />
                   <Button layoutX="135.0" layoutY="48.0" minWidth="29.0" mnemonicParsing="false" onMouseClicked="#selectFile" prefHeight="22.0" text="Select" />
                   <Button layoutX="135.0" layoutY="48.0" mnemonicParsing="false" text="Next" />
               </buttons>
